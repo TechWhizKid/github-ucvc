@@ -14,7 +14,7 @@ class compare_version:
         debug (bool): A flag that indicates whether to print debug messages or not. Default is False.
     """
 
-    def __init__(self, current_version, version_file_url, section, key, debug=False):
+    def __init__(self, current_version=None, version_file_url=None, section=None, key=None, debug=False):
         """The constructor of the compare_version class.
 
         Args:
@@ -60,9 +60,9 @@ class compare_version:
         Returns:
             int: A code indicating the result of the comparison.
             Possible codes are:
-                0: The current version is up to date or newer than the release date.
+                0: The current version is up to date.
                 1: The current version is older than the latest release date.
-                3: Version file does not contain the section name.
+                3: Version file does not contain the section name specified.
                 4: Invalid date format provided.
         """
         content = self.get_version_files_text(self.version_file_url) # Get the text content of the version file from the URL
@@ -102,7 +102,7 @@ class compare_version:
             Possible codes are:
                 0: The current version is equal to or greater than the latest version number.
                 1: The current version is less than the latest version number.
-                3: Version file does not contain the section name.
+                3: Version file does not contain the section name specified.
                 5: Invalid version format provided.
         """
         content = self.get_version_files_text(self.version_file_url)  # Get the text content of the version file from the URL
@@ -142,7 +142,7 @@ class compare_version:
             Possible codes are:
                 0: The current version is equal to or higher than the latest release type.
                 1: The current version is lower than the latest release type.
-                3: Version file does not contain the section name.
+                3: Version file does not contain the section name specified.
                 6: Invalid current version type provided.
                 7: Invalid latest version type provided.
         """
