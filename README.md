@@ -101,3 +101,7 @@ print(content) # You can now use the text to compare versions manually
 6: Invalid current version type provided.
 7: Invalid latest version type provided.
 ```
+
+# How to contribute
+
+This project is open to contributions and feedback from anyone who is interested in improving it. If you have any ideas for other ways to compare versions or other features that you would like to see, please feel free to share them. You can do so by creating an issue or a pull request on the GitHub repository. I appreciate your input and support. 😊
